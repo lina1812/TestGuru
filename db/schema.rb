@@ -56,7 +56,6 @@ ActiveRecord::Schema.define(version: 20_210_319_130_212) do
   create_table 'users', force: :cascade do |t|
     t.string 'name', null: false
     t.string 'password', null: false
-    t.string 'role', null: false
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
   end
