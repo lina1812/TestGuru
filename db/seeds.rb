@@ -20,27 +20,27 @@ categories = Category.create!([
                               ])
 
 tests = Test.create!([
-                       { title: 'Ruby', level: 1, category_id: categories[1].id, author_id: users[1].id },
-                       { title: 'JavaScript', level: 1, category_id: categories[0].id, author_id: users[1].id },
-                       { title: 'C#', level: 2, category_id: categories[1].id, author_id: users[1].id },
-                       { title: 'HTML', level: 1, category_id: categories[0].id, author_id: users[1].id },
-                       { title: 'SSL', level: 1, category_id: categories[2].id, author_id: users[1].id }
+                       { title: 'Ruby', level: 1, category: categories[1], author: users[1] },
+                       { title: 'JavaScript', level: 1, category: categories[0], author: users[1] },
+                       { title: 'C#', level: 2, category: categories[1], author: users[1] },
+                       { title: 'HTML', level: 1, category: categories[0], author: users[1] },
+                       { title: 'SSL', level: 1, category: categories[2], author: users[1] }
                      ])
 
 questions = Question.create!([
-                               { body: 'What are the methods for the loop?', test_id: tests[0].id},
-                               {  body: 'What is the <a> tag used for?', test_id: tests[3].id },
-                               { body: 'How to create a database?', test_id: tests[4].id },
-                               { body: 'What is the <body> tag used for?', test_id: tests[3].id },
-                               { body: 'What is the <p> tag used for?', test_id: tests[3].id }
+                               { body: 'What are the methods for the loop?', test: tests[0] },
+                               {  body: 'What is the <a> tag used for?', test: tests[3] },
+                               { body: 'How to create a database?', test: tests[4] },
+                               { body: 'What is the <body> tag used for?', test: tests[3] },
+                               { body: 'What is the <p> tag used for?', test: tests[3] }
                              ])
 
 Answer.create!([
-                 { body: 'CREATE DATABASE name', question_id: questions[1].id, correct: true },
-                 { body: 'UPDATE DATABASE name', question_id: questions[1].id },
-                 { body: 'CREATE TABLE name', question_id: questions[1].id },
-                 { body: 'for, while, loop...', question_id: questions[0].id, correct: true },
-                 { body: 'if, def... ', question_id: questions[0].id }
+                 { body: 'CREATE DATABASE name', question: questions[1], correct: true },
+                 { body: 'UPDATE DATABASE name', question: questions[1] },
+                 { body: 'CREATE TABLE name', question: questions[1] },
+                 { body: 'for, while, loop...', question: questions[0], correct: true },
+                 { body: 'if, def... ', question: questions[0] }
                ])
 
 PassedTest.create!({ user: User.first, test: Test.first, points: 10 })
