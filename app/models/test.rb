@@ -10,15 +10,9 @@ class Test < ApplicationRecord
                     uniqueness: { scope: :level }
   validates :level, numericality: { only_integer: true, greater_than: 0 }
 
-  LIGHT_LEVEL = (0..1).freeze
-  MEDIUM_LEVEL = (2..4).freeze
-  HIGHT_LEVEL = (5..Float::INFINITY).freeze
-
-  scope :tests_by_level, ->(range) { where(level: range) }
-
-  scope :light_tests, -> { tests_by_level(LIGHT_LEVEL) }
-  scope :medium_tests, -> { tests_by_level(MEDIUM_LEVEL) }
-  scope :hight_tests, -> { tests_by_level(HIGHT_LEVEL) }
+  scope :easy, ->  { where(level: (0..1)) }
+  scope :medium, ->  { where(level: (2..4)) }
+  scope :difficult, ->  { where(level: (5..Float::INFINITY)) }
 
   scope :by_category, ->(category_name) { joins(:category).where(categories: { title: category_name }) }
 
