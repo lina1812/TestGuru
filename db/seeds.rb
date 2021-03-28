@@ -7,11 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 users = User.create!([
-               { name: 'Lina', password: 'password' },
-               { name: 'Alex', password: 'password' },
-               { name: 'Ariana', password: 'password' },
-               { name: 'Andrey', password: 'password' }
-             ])
+                       { email: 'lina@example.com', password: 'password' },
+                       { email: 'alex@example.com', password: 'password' },
+                       { email: 'ariana@example.com', password: 'password' },
+                       { email: 'andrey@example.com', password: 'password' }
+                     ])
 
 categories = Category.create!([
                                 { title: 'Frontend' },
@@ -29,7 +29,7 @@ tests = Test.create!([
 
 questions = Question.create!([
                                { body: 'What are the methods for the loop?', test: tests[0] },
-                               {  body: 'What is the <a> tag used for?', test: tests[3] },
+                               { body: 'What is the <a> tag used for?', test: tests[3] },
                                { body: 'How to create a database?', test: tests[4] },
                                { body: 'What is the <body> tag used for?', test: tests[3] },
                                { body: 'What is the <p> tag used for?', test: tests[3] }
