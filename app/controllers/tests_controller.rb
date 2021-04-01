@@ -6,9 +6,9 @@ class TestsController < ApplicationController
     # /tests?level=2&lang=ru
     # /tests?data%5Blevel%5D=2&data%5Blang%5D=ru
     
-    result = ["Class: #{params.class}", "Parameters: #{params.inspect}"]
+    #result = ["Class: #{params.class}", "Parameters: #{params.inspect}"]
     
-    render  plain: result.join("\n")
+    #render  plain: result.join("\n")
     #render plain: 'All tests'
     
     
@@ -16,7 +16,7 @@ class TestsController < ApplicationController
     
     #render json: {tests: [] }
     
-    #render json: {tests: Test.all }
+    render json: {tests: Test.all }
     
     #render inline: '<p>My favourite language is: <%= %[ybuR].reverse! %>!</p>'
     
