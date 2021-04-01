@@ -3,9 +3,9 @@ class Answer < ApplicationRecord
 
   validates :body, presence: true
 
-  scope :correct, -> { where(correct: true) }
-  
   validate :validate_number
+  
+  scope :correct, -> { where(correct: true) }
   
   private 
   
