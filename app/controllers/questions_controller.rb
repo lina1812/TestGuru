@@ -15,8 +15,8 @@ class QuestionsController < ApplicationController
   def new; end
 
   def create
-    @question = @test.questions.create(question_params)
-    if @question.save
+    question = @test.questions.new(question_params)
+    if question.save
       redirect_to test_questions_path
     else
       render :new
@@ -24,7 +24,7 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    question = @test.questions.find(params[:id])
+    question = Question.find(params[:id])
     question.destroy
     render  plain: 'Question was deleted'
   end
