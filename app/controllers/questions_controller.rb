@@ -4,29 +4,43 @@ class QuestionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
-    render json: @test.questions.to_json
+    @questions = @test.questions
   end
 
   def show
-    question = Question.find(params[:id])
-    render json: question.to_json
+    @question = Question.find(params[:id])
   end
 
-  def new; end
+  def new
+    @question = @test.questions.new
+  end
 
   def create
-    question = @test.questions.new(question_params)
-    if question.save
+    @question = @test.questions.new(question_params)
+    if @question.save
       redirect_to test_questions_path
     else
       render :new
     end
   end
 
+  def edit
+    @question = Question.find(params[:id])
+  end
+
+  def update
+    @question = Question.find(params[:id])
+    if @question.update(question_params)
+      redirect_to question_path
+    else
+      render :edit
+    end
+  end
+
   def destroy
-    question = Question.find(params[:id])
-    question.destroy
-    render  plain: 'Question was deleted'
+    @question = Question.find(params[:id])
+    @question.destroy
+    redirect_to test_questions_path(@question.test)
   end
 
   private
