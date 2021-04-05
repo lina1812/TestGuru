@@ -39,6 +39,7 @@ class QuestionsController < ApplicationController
   def find
     @question = Question.find(params[:id])
   end
+
   def find_test
     @test = Test.find(params[:test_id])
   end
