@@ -1,6 +1,10 @@
+<p>
 <%= render 'description', test: @test %>
-<%= link_to 'Questions', test_questions_path(@test) %>
-<br>
-<br>
+</p>
+<p>
+<%= render 'questions/index', questions: @questions %>
+</p> 
+<p>
 <%= link_to 'Edit', edit_test_path(@test)%> | 
 <%= link_to 'Back', tests_path%>
+</p>

@@ -2,7 +2,7 @@
   <td><%= test.title %></td>
   <td><%= test.level %></td>
   <td><%= test.category.title %></td>
-  <td><%= link_to "#{test.questions.size}", test_questions_path(test) %></td>
+  <td><%= test.questions.size %></td>
   <td><%= link_to 'Show', test_path(test) %></td>
   <td><%= link_to 'Edit', edit_test_path(test) %></td>
   <td>

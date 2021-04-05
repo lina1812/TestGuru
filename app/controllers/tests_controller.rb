@@ -1,4 +1,5 @@
 class TestsController < ApplicationController
+  before_action :find, only: %i[show edit update destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
   def index
@@ -6,7 +7,7 @@ class TestsController < ApplicationController
   end
 
   def show
-    @test = Test.find(params[:id])
+    @questions = @test.questions
   end
 
   def new
@@ -22,12 +23,9 @@ class TestsController < ApplicationController
     end
   end
 
-  def edit
-    @test = Test.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @test = Test.find(params[:id])
     if @test.update(test_params)
       redirect_to test_path
     else
@@ -35,14 +33,7 @@ class TestsController < ApplicationController
     end
   end
 
-  def search
-    result = ["Class: #{params.class}", "Parameters: #{params.inspect}"]
-
-    render plain: result.join("\n")
-  end
-
   def destroy
-    @test = Test.find(params[:id])
     @test.destroy
     redirect_to tests_path
   end
@@ -51,6 +42,10 @@ class TestsController < ApplicationController
 
   def test_params
     params.require(:test).permit(:title, :level, :category_id)
+  end
+  
+  def find
+    @test = Test.find(params[:id])
   end
 
   def rescue_with_test_not_found
