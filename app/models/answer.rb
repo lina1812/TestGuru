@@ -11,6 +11,7 @@ class Answer < ApplicationRecord
 
   def validate_number
     return unless new_record?
+
     errors.add(:number, 'too much answers') if Answer.where(question: question).count >= 4
   end
 end
