@@ -1,13 +1,13 @@
 <h1> The <%= @test_passage.test.title %> Test was Completed!</h1>
 
-<% if @result < 85 %>
-  <p style="color:#FF0000">
-    Test failed: Your result <%= @result %> %
-  </p>
+<% if @test_passage.successful? %>
+ <p class="succes">
+   Test passed: Your result <%= @counting_result %> %
+ </p>
 <% else %>
-  <p style="color:#00FF00">
-    Test passed: Your result <%= @result %> %
-  </p>  
+  <p class="fail">
+    Test failed: Your result <%= @counting_result %> %
+  </p>
 <% end %>
 
 <p>

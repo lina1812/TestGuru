@@ -4,7 +4,7 @@ class TestPassagesController < ApplicationController
   def show; end
 
   def result
-    @result = @test_passage.counting_result
+    @counting_result = @test_passage.counting_result
   end
 
   def update
