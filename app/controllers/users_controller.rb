@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  skip_before_action :authenticate_user!
-
   def new
     @user = User.new
   end
@@ -11,6 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       redirect_to after_login_path
+      cookies.delete :first_url_path
     else
       render :new
     end

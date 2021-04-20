@@ -1,6 +1,4 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
-
   protect_from_forgery with: :exception
 
   helper_method :current_user,
@@ -10,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless current_user
-      cookies[:path] = request.url
+      cookies[:first_url_path] = request.url
       redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please'
     end
     cookies[:email] = current_user&.email
@@ -25,6 +23,6 @@ class ApplicationController < ActionController::Base
   end
 
   def after_login_path
-    cookies[:path] || tests_path
+    cookies[:first_url_path] || tests_path
   end
 end

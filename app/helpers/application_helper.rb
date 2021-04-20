@@ -7,7 +7,7 @@ module ApplicationHelper
     link_to repo.to_s, "https://github.com/#{author}/#{repo}/", { target: '_blank', rel: 'nofollow' }
   end
 
-  def flash_alerts
-    content_tag :p, flash[:alert], class: 'flash alert' if flash[:alert]
+  def flash_message(type)
+    tag.p flash[type], class: "flash #{type}" if flash[type]
   end
 end

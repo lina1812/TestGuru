@@ -10,22 +10,7 @@
   </head>
 
   <body>
-    <nav class="nav user">
-      <p><%= link_to 'TestGuru', root_path %></p>
-      <% if logged_in? %>
-        <p>Welcome, <b><%= current_user.email %></b> Guru!</p>
-        <p>
-          <%= link_to 'Exit',
-          session_path(session),
-          method: :delete,
-          data: { confirm: 'Are you sure?' } %>
-        </p>
-      <% else %>
-        <%= link_to 'Login', login_path %> | 
-        <%= link_to 'Signup', signup_path %>
-      <% end %>
-    </nav>
-    
+    <%= render 'shared/nav' %>    
     <%= yield %>
     <%= render 'shared/footer' %>
   </body>
