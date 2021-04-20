@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to tests_path
+      redirect_to after_login_path
     else
       render :new
     end

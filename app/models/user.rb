@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :author_tests, class_name: 'Test', inverse_of: :author, foreign_key: :author_id, dependent: :nullify
 
-  EMAIL_REGEXP = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/i.freeze
+  EMAIL_REGEXP = /\A[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\z/i.freeze
   validates :email, presence: true,
                     uniqueness: true,
                     format: { with: EMAIL_REGEXP, message: 'please enter email in correct format' }
