@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   
   get 'sessions/new'
   get 'users/new'
-  resources :answers
+  
   root 'tests#index'
 
   resources :tests, only: :index do
