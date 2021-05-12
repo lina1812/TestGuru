@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def after_sign_in_path_for(_resource)
-    flash[:notice] = "Hello #{current_user.first_name} #{current_user.last_name}"
     current_user.is_a?(Admin) ? admin_tests_path : root_path
   end
 
