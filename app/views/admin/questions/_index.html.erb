@@ -7,11 +7,11 @@
     </tr>
   </thead>
   <tbody>
-    <%= render partial: 'questions/question', collection: @questions %>
+    <%= render partial: 'admin/questions/question', collection: @questions %>
   </tbody> 
 </table>
 <p>
-  <%= link_to 'New question', new_test_question_path(@test, @question) %>
+  <%= link_to 'New question', new_admin_test_question_path(@test, @question) %>
 </p>
 <p>
 <%= link_to 'Back to tests', admin_tests_path%>
