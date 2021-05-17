@@ -1,10 +1,10 @@
-<h1>Test: <%= test.title %></h1>
+<h1><%= t('admin.tests.show.header', title: test.title) %></h1>
 
 <p>
-  <strong>Level:</strong>
+  <strong><%= t('helpers.label.test.level') %>:</strong>
    <%= test.level %>
 </p>
 <p>
-  <strong>Category:</strong>
+  <strong><%= t('helpers.label.test.category_id') %>:</strong>
   <%= test.category.title %>
 </p>
