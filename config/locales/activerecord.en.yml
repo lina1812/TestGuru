@@ -17,6 +17,13 @@ en:
       answer: 
         body: "Body" 
         correct: "Correct"
+      user:
+        email: "Email"
+        password: "Password"
+        first_name: "First name"
+        last_name: "Last name"
+        password_confirmation: "Password confirmation"
+        remember_me: "Remember me"
                
     errors:
       messages:

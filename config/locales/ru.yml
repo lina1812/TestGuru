@@ -10,6 +10,8 @@ ru:
       answer:
         create: "Создать ответ"
         update: "Обновить ответ"
+      user:
+        create: "Вход"
           
     label:
       test:
