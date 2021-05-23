@@ -39,12 +39,16 @@ ru:
       author_name: "Алёна Кудрявцева-Дьяконова"
       description: "Приложение для создания, управления и прохождения тестов"
       link: "Учебный проект в онлайн-школе Thinknetica"  
-    
-        
+    nav:
+      welcome_html: "Добро пожаловать, <b class='nav-admin user-email'> %{email} </b> Guru!" 
+      logout: "Выйти"
+      login: "Войти"
+      signup: "Регистрация" 
   tests:
     index:
       header: "Доступные Тесты"
       actions: "Действия"
+      start: "Старт"
       
   test_passages:
     result:

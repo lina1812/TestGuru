@@ -37,11 +37,18 @@ en:
       author_name: "Alena Kudriavtseva-Dyakonova"
       description: "Application for creating, managing and passing tests"
       link: "Study project at Thinknetica online school"
-        
+    nav:
+      welcome_html: "Welcome, <b class='nav-admin user-email'> %{email} </b> Guru!"
+      logout: "Logout"
+      login: "Login"
+      signup: "Signup"           
+  
   tests:
     index:
       header: "Tricky Tests"
       actions: "Actions"
+      start: "Start"
+    
       
   test_passages:
     result:
