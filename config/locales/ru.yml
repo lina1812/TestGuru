@@ -3,38 +3,101 @@ ru:
     submit:
       test:
         create: "Создать тест"
-        update: "Обновить тест"
+        update: "Обновить тест"        
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
     label:
       test:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+      question:
+        body: "Текст вопроса"
+      answer:
+        body: "Текст ответа"
+    links:
+      actions:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      navigation: 
+        back: "Вернуться к тестам"
+        
   shared:
     errors:
       header:
         few: "Обнаружено %{count} ошибки"
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружено %{count} ошибка"
-        other: "Обнаружено %{count} ошибки"
+        other: "Обнаружено %{count} ошибки" 
+    footer:
+      author_name: "Алёна Кудрявцева-Дьяконова"
+      description: "Приложение для создания, управления и прохождения тестов"
+      link: "Учебный проект в онлайн-школе Thinknetica"  
+    
         
   tests:
     index:
       header: "Доступные Тесты"
+      actions: "Действия"
       
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
-      
+
   admin:
+    nav:
+      header: "TestGuru Панель Администратора"
+      welcome_html: "Добро пожаловать, <b class='nav-admin user-email'> %{email} </b> Guru!"
+      logout: "Выйти"
     tests:
       create:
         success: "Тест успешно создан."
+        header: "Создать новый тест"
       index:
         header: "Доступные Тесты"
+        actions: "Действия"
+        new: "Создать новый тест"
       show:
         header: "Тест: %{title}"
-
-
+        edit: "Редактировать"
+      edit: 
+        header: "Редактировать тест"   
+    questions:
+      create:
+        success: "Вопрос успешно создан."
+        header: "Создать новый вопрос для теста %{title}"
+      edit: 
+        header: "Редактировать вопрос для теста %{title}"
+      index:
+        header: "Вопросы:"
+        actions: "Действия"
+        new: "Создать новый вопрос"
+        
+      show:
+        header: "Вопрос: %{body}"
+        edit: "Редактировать"
+        back: "Вернуться к тесту"   
+      edit: 
+        header: "Редактировать вопрос"
+        back: "Назад" 
+    answers:
+      create:
+        success: "Ответ успешно создан."
+      index:
+        header: "Ответы:"
+        actions: "Действия"
+        new: "Создать новый ответ"
+      show:
+        header: "Ответ: %{body}"
+        edit: "Редактировать"
+        back: "Вернуться к вопросу" 
+      
   test_mailer:
     completed_test:
       subgect: "Вы успешно завершили тест на TestGuru!"

@@ -1,10 +1,10 @@
 <h1><%= t('admin.tests.show.header', title: test.title) %></h1>
 
 <p>
-  <strong><%= t('helpers.label.test.level') %>:</strong>
+  <strong><%= t(Test.human_attribute_name(:level)) %>:</strong>
    <%= test.level %>
 </p>
 <p>
-  <strong><%= t('helpers.label.test.category_id') %>:</strong>
+  <strong><%= t(Test.human_attribute_name(:category)) %>:</strong>
   <%= test.category.title %>
 </p>

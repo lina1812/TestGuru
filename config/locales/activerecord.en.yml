@@ -2,12 +2,22 @@ en:
   activerecord:
     models:
       test: "Test"
+      question: "Question"
+      answer: "Answer"
       
     attributes:
       test:
         title: "Title"
-        
+        level: "Level"
+        category: "Category"
+        questions: "Questions"
+      question:
+        body: "Body"
+        answers: "Answers"
+      answer: 
+        body: "Body" 
+        correct: "Correct"
+               
     errors:
       messages:
         blank: "can't be blank"
-      
