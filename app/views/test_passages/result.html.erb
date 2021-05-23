@@ -2,14 +2,14 @@
 
 <% if @test_passage.successful? %>
  <p class="succes">
-   Test passed: Your result <%= @counting_result %> %
+  <%= t('.passed', result: @counting_result )%> 
  </p>
 <% else %>
   <p class="fail">
-    Test failed: Your result <%= @counting_result %> %
+     <%= t('.failed', result: @counting_result )%>
   </p>
 <% end %>
 
 <p>
-<%= link_to 'Back to Tests', tests_path%>
+<%= link_to t('helpers.links.navigation.back'), tests_path%>
 </p>

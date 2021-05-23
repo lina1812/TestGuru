@@ -10,6 +10,7 @@ en:
       answer:
         create: "Create Answer"
         update: "Update Answer"
+          
     label:
       test:
         title: "Title"
@@ -53,6 +54,11 @@ en:
   test_passages:
     result:
       header: "The %{title} Test was Completed!"
+      passed: "Test passed: Your result %{result} %"
+      failed: "Test failed: Your result %{result} %"
+    show:
+      header: "Passing the %{title} Test"
+      next: "Next"
       
   admin:
     nav:

@@ -10,6 +10,7 @@ ru:
       answer:
         create: "Создать ответ"
         update: "Обновить ответ"
+          
     label:
       test:
         title: "Название"
@@ -53,6 +54,11 @@ ru:
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
+      passed: "Тест сдан: Ваш результат %{result} %"
+      failed: "Тест не сдан: Ваш результат %{result} %"
+    show:
+      header: "Прохождение теста %{title}"  
+      next: "Дальше" 
 
   admin:
     nav:
