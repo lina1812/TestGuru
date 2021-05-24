@@ -85,6 +85,7 @@ ru:
     sessions:
       already_signed_out: Выход из системы уже выполнен.
       new:
+        enter: "Войти"
         header: "Вход для Гуру"
         sign_in: Войти
       signed_in: Вход в систему выполнен.
