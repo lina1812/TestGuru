@@ -117,6 +117,7 @@ en:
     sessions:
       already_signed_out: Signed out successfully.
       new:
+        enter: "Войти"
         header: "Enter the Guru Gates"
         sign_in: Log in
       signed_in: Signed in successfully.
