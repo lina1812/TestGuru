@@ -4,32 +4,118 @@ en:
       test:
         create: "Create Test"
         update: "Update Test"
+      question:
+        create: "Create Question"
+        update: "Update Question"
+      answer:
+        create: "Create Answer"
+        update: "Update Answer"
+          
     label:
       test:
         title: "Title"
         level: "Level"
         category_id: "Category"
-        
+      question:
+        body: "Body"
+      answer:
+        body: "Body"    
+    links:
+      actions:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      navigation: 
+        back: "Back to tests"
+      
   shared:
     errors:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
-        
+    footer:
+      author_name: "Alena Kudriavtseva-Dyakonova"
+      description: "Application for creating, managing and passing tests"
+      link: "Study project at Thinknetica online school"
+    nav:
+      welcome_html: "Welcome, <b class='nav-admin user-email'> %{email} </b> Guru!"
+      logout: "Logout"
+      login: "Login"
+      signup: "Signup"           
+  
   tests:
     index:
       header: "Tricky Tests"
+      actions: "Actions"
+      start: "Start"
+    
       
   test_passages:
     result:
       header: "The %{title} Test was Completed!"
+      passed: "Test passed: Your result %{result} %"
+      failed: "Test failed: Your result %{result} %"
+    show:
+      header: "Passing the %{title} Test"
+      next: "Next"
       
   admin:
+    nav:
+      header: "TestGuru Admin Panel"
+      welcome_html: "Welcome, <b class='nav-admin user-email'> %{email} </b> Guru!"
+      logout: "Logout"
     tests:
       create:
         success: "Test was successfully created"
+        header: "Create New Test"
       index:
         header: "Tricky Tests"
+        actions: "Actions"
+        new: "New test"
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      show:
+        header: "Test: %{title}"
+        back: "Back to tests"
+        edit: "Edit"
+      edit: 
+        header: "Edit test"
+        back: "Back to tests"
+        
+    questions:
+      create:
+        success: "Question was successfully created"
+        header: "Create New %{title} Question"
+      edit:
+        header: "Edit %{title} Question"
+      index:
+        header: "Questions"
+        actions: "Actions"        
+        new: "New question"
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        back: "Back to tests"
+        confirm: "Are you sure?"
+      show:
+        header: "Question: %{body}"
+        back: "Back to tests"
+        edit: "Edit"
+    answers:
+      create:
+        success: "Answer was successfully created"
+      index:
+        header: "Answers"
+        actions: "Actions"
+        new: "New Answer"
+      show:
+        header: "Answer: %{body}"
+        edit: "Edit"
+        back: "Back to question"
+
 
   test_mailer:
     completed_test:
