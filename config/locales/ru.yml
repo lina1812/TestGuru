@@ -43,6 +43,7 @@ ru:
       description: "Приложение для создания, управления и прохождения тестов"
       link: "Учебный проект в онлайн-школе Thinknetica"  
     nav:
+      admin_panel: "Панель Администратора"
       welcome_html: "Добро пожаловать, <b class='nav-admin user-email'> %{email} </b> Guru!" 
       logout: "Выйти"
       login: "Войти"
@@ -64,7 +65,8 @@ ru:
 
   admin:
     nav:
-      header: "TestGuru Панель Администратора"
+      admin_panel: "Панель Администратора"
+      header: "Панель Администратора"
       welcome_html: "Добро пожаловать, <b class='nav-admin user-email'> %{email} </b> Guru!"
       logout: "Выйти"
     tests:

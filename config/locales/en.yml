@@ -39,6 +39,7 @@ en:
       description: "Application for creating, managing and passing tests"
       link: "Study project at Thinknetica online school"
     nav:
+      admin_panel: "Admin Panel"
       welcome_html: "Welcome, <b class='nav-admin user-email'> %{email} </b> Guru!"
       logout: "Logout"
       login: "Login"
@@ -62,6 +63,7 @@ en:
       
   admin:
     nav:
+      admin_panel: "Admin Panel"
       header: "TestGuru Admin Panel"
       welcome_html: "Welcome, <b class='nav-admin user-email'> %{email} </b> Guru!"
       logout: "Logout"

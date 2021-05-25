@@ -58,8 +58,8 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    autoprefixer-rails (9.8.6.3)
-      execjs
+    autoprefixer-rails (10.2.5.0)
+      execjs (< 2.8.0)
     bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.7.2)
@@ -88,7 +88,7 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.10.0)
-    execjs (2.8.1)
+    execjs (2.7.0)
     ffi (1.15.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)

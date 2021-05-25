@@ -4,5 +4,5 @@
   <td><%= test.category.title %></td>
   <td><%= test.questions.size %></td>
   </td>
-  <td><%= button_to t('tests.index.start'), start_test_path(test) %></td>
+  <td><%= button_to t('tests.index.start'), start_test_path(test), :class => 'btn btn-primary btn-sm' %></td>
 </tr>

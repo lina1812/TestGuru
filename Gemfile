@@ -37,6 +37,9 @@ gem 'rails-i18n'
 #UI
 gem 'bootstrap', '~> 5.0.1'
 gem 'jquery-rails'
+#gem "twitter-bootstrap-rails"
+
+
 
 
 group :development, :test do
