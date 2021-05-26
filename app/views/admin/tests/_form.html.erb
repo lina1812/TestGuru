@@ -1,4 +1,4 @@
-<div class="form-group m-5">
+<div class="form-group m-3 ">
   <div class='row mb-5 mt-3'>
     <div class='col col-md-5'>
       <div class="card border-primary p-3">
@@ -19,7 +19,7 @@
             <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true, class: 'form-label' %>
           </p>
   
-          <p><%= form.submit t('helpers.submit.test.create'), class: 'btn btn-primary'%></p>
+          <p><%= form.submit t( method_for_submit_form(@test) ), class: 'btn btn-primary' %></p>
         <% end %>
       </div>
     </div>

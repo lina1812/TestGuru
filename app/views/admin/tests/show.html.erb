@@ -1,10 +1,12 @@
-<p>
-<%= render 'description', test: @test %>
-</p>
-<p>
-<%= render partial: 'admin/questions/index' %>
-</p> 
-<p>
-<%= link_to t('admin.tests.show.edit'), edit_admin_test_path(@test)%> | 
-<%= link_to t('helpers.links.navigation.back'), admin_tests_path%>
-</p>
+<div class="container m-3">
+  <p>
+    <%= render 'description', test: @test %>
+  </p>
+  <p>
+    <%= render partial: 'admin/questions/index' %>
+  </p>
+  <p>
+    <%= link_to t('admin.tests.show.edit'), edit_admin_test_path(@test),  class: 'btn btn-success'%> 
+    <%= link_to t('helpers.links.navigation.back'), admin_tests_path, class: 'btn btn-primary'%>
+  </p>
+</div>
