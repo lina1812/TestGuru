@@ -1,15 +1,6 @@
 ru:
   helpers:
     submit:
-      test:
-        create: "Создать тест"
-        update: "Обновить тест"        
-      question:
-        create: "Создать вопрос"
-        update: "Обновить вопрос"
-      answer:
-        create: "Создать ответ"
-        update: "Обновить ответ"
       user:
         create: "Вход"
           
@@ -73,6 +64,9 @@ ru:
       create:
         success: "Тест успешно создан."
         header: "Создать новый тест"
+      form:
+        create: "Создать тест"
+        update: "Обновить тест"
       index:
         header: "Доступные Тесты"
         actions: "Действия"
@@ -86,6 +80,9 @@ ru:
       create:
         success: "Вопрос успешно создан."
         header: "Создать новый вопрос для теста %{title}"
+      form:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
       edit: 
         header: "Редактировать вопрос для теста %{title}"
       index:
@@ -103,6 +100,9 @@ ru:
     answers:
       create:
         success: "Ответ успешно создан."
+      form: 
+        create: "Создать ответ"
+        update: "Обновить ответ"
       index:
         header: "Ответы:"
         actions: "Действия"
@@ -111,6 +111,13 @@ ru:
         header: "Ответ: %{body}"
         edit: "Редактировать"
         back: "Вернуться к вопросу" 
+      edit: 
+        header: "Редактировать ответ"
+        back: "Назад"
+      new:
+        header: "Создать новый ответ"
+        back: "Вернуться к вопросу" 
+      
       
   test_mailer:
     completed_test:
