@@ -1,10 +1,13 @@
-<h1><%= t('admin.tests.show.header', title: test.title) %></h1>
-
-<p>
-  <strong><%= t(Test.human_attribute_name(:level)) %>:</strong>
-   <%= test.level %>
-</p>
-<p>
-  <strong><%= t(Test.human_attribute_name(:category)) %>:</strong>
-  <%= test.category.title %>
-</p>
+<div class="page-header">
+  <h1><%= t('admin.tests.show.header', title: test.title) %></h1>
+</div>
+<div class="container m-3">
+  <p>
+    <strong><%= t(Test.human_attribute_name(:level)) %>:</strong>
+    <%= test.level %>
+  </p>
+  <p>
+    <strong><%= t(Test.human_attribute_name(:category)) %>:</strong>
+    <%= test.category.title %>
+  </p>
+</div>

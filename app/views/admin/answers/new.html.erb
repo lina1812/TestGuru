@@ -1,9 +1,12 @@
-<h1>New Answer</h1>
+<div class="container m-3">
+  <div class="page-header">
+    <h2><%= t('.header') %></h2>
+  </div>
+  <p>
+    <%= @question.body %>
+  </p>
 
-<p>
-  <%= @question.body %>
-</p>
+  <%= render 'form'%>
 
-<%= render 'form'%>
-
-<%= link_to 'Back', admin_question_path(@question) %>
+  <%= link_to t('.back'), admin_question_path(@question), class: 'btn btn-primary' %>
+</div>

@@ -1,16 +1,8 @@
 en:
   helpers:
     submit:
-      test:
-        create: "Create Test"
-        update: "Update Test"
-      question:
-        create: "Create Question"
-        update: "Update Question"
-      answer:
-        create: "Create Answer"
-        update: "Update Answer"
-          
+      user:
+        create: "Enter"
     label:
       test:
         title: "Title"
@@ -39,6 +31,7 @@ en:
       description: "Application for creating, managing and passing tests"
       link: "Study project at Thinknetica online school"
     nav:
+      admin_panel: "Admin Panel"
       welcome_html: "Welcome, <b class='nav-admin user-email'> %{email} </b> Guru!"
       logout: "Logout"
       login: "Login"
@@ -62,6 +55,7 @@ en:
       
   admin:
     nav:
+      admin_panel: "Admin Panel"
       header: "TestGuru Admin Panel"
       welcome_html: "Welcome, <b class='nav-admin user-email'> %{email} </b> Guru!"
       logout: "Logout"
@@ -69,6 +63,9 @@ en:
       create:
         success: "Test was successfully created"
         header: "Create New Test"
+      form: 
+        create: "Create Test"
+        update: "Update Test"
       index:
         header: "Tricky Tests"
         actions: "Actions"
@@ -89,6 +86,9 @@ en:
       create:
         success: "Question was successfully created"
         header: "Create New %{title} Question"
+      form:
+        create: "Create Question"
+        update: "Update Question"
       edit:
         header: "Edit %{title} Question"
       index:
@@ -104,9 +104,15 @@ en:
         header: "Question: %{body}"
         back: "Back to tests"
         edit: "Edit"
+      edit: 
+        header: "Edit question"
+        back: "Back to tests"
     answers:
       create:
-        success: "Answer was successfully created"
+        header: "Answer was successfully created"
+      form:
+        create: "Create Answer"
+        update: "Update Answer"
       index:
         header: "Answers"
         actions: "Actions"
@@ -114,6 +120,12 @@ en:
       show:
         header: "Answer: %{body}"
         edit: "Edit"
+        back: "Back to question"
+      edit: 
+        header: "Edit answer"
+        back: "Back to tests"
+      new:
+        create: "Create Answer"
         back: "Back to question"
 
 

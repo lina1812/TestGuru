@@ -1,16 +1,18 @@
-<h1><%= t('.header') %></h1>
-<table>
+<%- model_class = Test -%>
+<div class="page-header">
+  <h1><%=t '.header' %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th><%= t(Test.human_attribute_name(:title)) %></th>
-      <th><%= t(Test.human_attribute_name(:level)) %></th>
-      <th><%= t(Test.human_attribute_name(:category)) %></th>
-      <th><%= t(Test.human_attribute_name(:questions)) %></th>
+      <th><%= t(model_class.human_attribute_name(:title)) %></th>
+      <th><%= t(model_class.human_attribute_name(:level)) %></th>
+      <th><%= t(model_class.human_attribute_name(:category)) %></th>
+      <th><%= t(model_class.human_attribute_name(:questions)) %></th>
       <th><%= t('.actions') %></th>
     </tr>
   </thead>
   <tbody>
     <%= render @tests %>
-  <tbody>
+  </tbody>
 </table>
-

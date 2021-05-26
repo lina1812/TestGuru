@@ -1,8 +1,10 @@
-<h1>Editing Answer</h1>
-
-<p>
+<div class="page-header m-3">
+  <h2><%= t('.header') %></h2>
+</div>
+<p class=m-3>
   <%= @answer.question.body %>
 </p>
-
-<%= render 'form' %>
-<%= link_to 'Back', admin_question_path(@answer.question) %>
+<div class="container m-3">
+  <%= render 'form' %>
+  <%= link_to t('.back'), admin_question_path(@answer.question), class: "btn btn-primary" %>
+</div>
