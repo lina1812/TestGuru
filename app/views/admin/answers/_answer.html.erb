@@ -1,9 +1,13 @@
-<li>
-  <%= answer.body %> <br>
-  <%= link_to t('helpers.links.actions.show'), admin_answer_path(answer) %> |
-  <%= link_to t('helpers.links.actions.edit'), edit_admin_answer_path(answer) %> |
-  <%= link_to t('helpers.links.actions.delete'),
-              admin_answer_path(answer),
-              method: :delete,
-              data: { confirm: t('helpers.links.actions.confirm') } %>
-</li>
+<tr>
+  <td> <%= answer.body %></td>
+  <td><%= link_to t('helpers.links.actions.show'), admin_answer_path(answer), :class => 'btn btn-primary' %></td>
+  <td><%= link_to t('helpers.links.actions.edit'), edit_admin_answer_path(answer),:class => 'btn btn-success' %></td>
+  <td>
+    <%= link_to t('helpers.links.actions.delete'),
+        admin_answer_path(answer),
+        method: :delete,
+        data: { confirm: t('helpers.links.actions.confirm') }, 
+        :class => 'btn btn-danger'
+     %>
+  </td>
+</tr>
