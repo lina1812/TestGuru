@@ -1,11 +1,12 @@
 <tr>
   <td><%= question.body %></td>
-  <td><%= link_to t('helpers.links.actions.show'), admin_question_path(question) %></td>
-  <td><%= link_to t('helpers.links.actions.edit'), edit_admin_question_path(question) %></td>
+  <td><%= link_to t('helpers.links.actions.show'), admin_question_path(question), :class => 'btn btn-primary' %></td>
+  <td><%= link_to t('helpers.links.actions.edit'), edit_admin_question_path(question),:class => 'btn btn-success' %></td>
   <td>
     <%= link_to t('helpers.links.actions.delete'),
      admin_question_path(question),
      method: :delete,
-     data: { confirm: t('helpers.links.actions.confirm') } %>
+     data: { confirm: t('helpers.links.actions.confirm') }, 
+     :class => 'btn btn-danger' %>
   </td>
 </tr>

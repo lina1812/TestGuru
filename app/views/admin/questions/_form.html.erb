@@ -1,13 +1,20 @@
-<h1><%= question_header(@question) %></h1>
-
-<%= form_with model: [:admin, @test, @question], local: true do |form| %>
-  <%= render 'shared/errors', resource: @question %>
-
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body, id: :question_body, rows: 7, cols: 60 %>
-  </p>
+<div class="container m-3">
+  <div class="page-header">
+    <h2><%= question_header(@question) %></h2>
+  </div>
+  <div class="form-group ">
+    <div class='row mb-5 mt-3'>
+      <div class='col col-md-5'>
+        <%= form_with model: [:admin, @test, @question], local: true do |form| %>
+          <%= render 'shared/errors', resource: @question %>
+          <label class="form-label">
+            <%= form.label :body %>
+            <%= form.text_area :body, id: :question_body, rows: 7, cols: 60 %>
+          </label>
   
-  
-  <p><%= form.submit %></p>
-<% end %>
+          <p><%= form.submit t( method_for_submit_form(@question) ), class: "btn btn-primary" %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
