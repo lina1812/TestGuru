@@ -1,4 +1,9 @@
 module ApplicationHelper
+  FLASH_CLASS = {
+    alert: 'danger',
+    notice: 'info'
+  }.freeze
+
   def current_year
     Date.current.year
   end
@@ -8,11 +13,10 @@ module ApplicationHelper
   end
 
   def flash_key_to_class(key)
-    case key.to_sym
-    when :alert
-      'danger'
-    when :notice
-      'info'
-    end
+    FLASH_CLASS[key.to_sym]
+  end
+
+  def method_for_submit_form(object)
+    object.new_record? ? '.create' : '.update'
   end
 end
