@@ -52,7 +52,11 @@ ru:
       failed: "Тест не сдан: Ваш результат %{result} %"
     show:
       header: "Прохождение теста %{title}"  
-      next: "Дальше" 
+      next: "Дальше"
+      gist: "Gist вопрос"
+    gist:
+      success: "Gist успешно сохранён!"
+      failure: "Во время сохранения gist произошла ошибка"
 
   admin:
     nav:
