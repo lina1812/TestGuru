@@ -55,7 +55,7 @@ ru:
       next: "Дальше"
       gist: "Gist вопрос"
     gist:
-      success: "Gist успешно сохранён!"
+      success: "Gist успешно сохранён %{url}!"
       failure: "Во время сохранения gist произошла ошибка"
 
   admin:
