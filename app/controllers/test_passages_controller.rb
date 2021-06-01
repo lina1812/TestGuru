@@ -17,19 +17,18 @@ class TestPassagesController < ApplicationController
       render :show
     end
   end
-  
+
   def gist
     result = GistQuestionService.new(@test_passage.current_question, current_user).call
-    
+
     flash_options = if !result.nil?
-      { notice: t('.success_html', url: (helpers.link_to result.url, result.url , {target: "_blank", rel: "nofollow"})) }
-    else
-      { alert: t('.failure') }
-    end
+                      { notice: t('.success_html', url: (helpers.link_to result.url, result.url, { target: '_blank', rel: 'nofollow' })) }
+                    else
+                      { alert: t('.failure') }
+                    end
 
     redirect_to @test_passage, flash_options
   end
-  
 
   private
 
@@ -37,12 +36,3 @@ class TestPassagesController < ApplicationController
     @test_passage = TestPassage.find(params[:id])
   end
 end
-
-
-
-
-
-
-
-
-
