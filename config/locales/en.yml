@@ -64,6 +64,7 @@ en:
       header: "TestGuru Admin Panel"
       welcome_html: "Welcome, <b class='nav-admin user-email'> %{email} </b> Guru!"
       logout: "Logout"
+      gist: "Table with Gists"
     tests:
       create:
         success: "Test was successfully created"
@@ -132,6 +133,9 @@ en:
       new:
         create: "Create Answer"
         back: "Back to question"
+    gists:
+      index:
+        header: "Created Gists"
 
 
   test_mailer:

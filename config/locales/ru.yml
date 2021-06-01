@@ -65,6 +65,7 @@ ru:
       header: "Панель Администратора"
       welcome_html: "Добро пожаловать, <b class='nav-admin user-email'> %{email} </b> Guru!"
       logout: "Выйти"
+      gist: "Таблица с Gists"
     tests:
       create:
         success: "Тест успешно создан."
@@ -122,6 +123,10 @@ ru:
       new:
         header: "Создать новый ответ"
         back: "Вернуться к вопросу" 
+        
+    gists:
+      index:
+        header: "Созданные Gist"
       
       
   test_mailer:
