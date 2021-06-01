@@ -55,8 +55,9 @@ ru:
       next: "Дальше"
       gist: "Gist вопрос"
     gist:
-      success: "Gist успешно сохранён %{url}!"
+      success_html: "Gist успешно сохранён %{url}!"
       failure: "Во время сохранения gist произошла ошибка"
+      description: "Вопрос %{title} из TestGuru"
 
   admin:
     nav:

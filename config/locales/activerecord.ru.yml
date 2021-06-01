@@ -22,6 +22,10 @@ ru:
       answer: 
         body: "Текст ответа"
         correct: "Правильный" 
+      gist: 
+        question: "Текст вопроса"
+        url: "Gist's URL"
+        user: "Email пользователя"
       user:
         confirmation_sent_at: Дата отправки подтверждения
         confirmation_token: Токен подтверждения

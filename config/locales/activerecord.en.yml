@@ -17,6 +17,10 @@ en:
       answer: 
         body: "Body" 
         correct: "Correct"
+      gist: 
+        question: "Question body"
+        url: "Gist's URL"
+        user: "User's Email"
       user:
         email: "Email"
         password: "Password"
