@@ -1,4 +1,6 @@
 class GistQuestionService
+  include Dry::Monads[:result]
+
   def initialize(question, client: nil)
     @question = question
     @test = @question.test
@@ -6,9 +8,9 @@ class GistQuestionService
   end
 
   def call
-    @client.create_gist(gist_params)
+    Success(@client.create_gist(gist_params))
   rescue Faraday::ConnectionFailed, Octokit::Unauthorized
-    {}
+    Failure(:connection_error)
   end
 
   private
@@ -25,8 +27,6 @@ class GistQuestionService
   end
 
   def gist_content
-    content = [@question.body]
-    content += @question.answers.pluck(:body)
-    content.join("\n")
+    [@question.body, *@question.answers.pluck(:body)].join("\n")
   end
 end

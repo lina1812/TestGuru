@@ -3,18 +3,17 @@ class GistsController < ApplicationController
 
   def create
     result = GistQuestionService.new(@test_passage.current_question).call
-
-    flash_options = if result.present?
-                      Gist.create(
-                        user: current_user,
-                        question: @test_passage.current_question,
-                        url: result[:html_url],
-                        gist_id: result[:id]
-                      )
-                      { notice: t('.success_html', url: result.url) }
-                    else
-                      { alert: t('.failure') }
-                    end
+    if result.success?
+      Gist.create(
+        user: current_user,
+        question: @test_passage.current_question,
+        url: result.value![:html_url],
+        gist_id: result.value![:id]
+      )
+      flash_options = { notice: t('.success_html', url: result.value![:url]) }
+    else
+      flash_options = { alert: t('.failure') }
+    end
 
     redirect_to @test_passage, flash_options
   end
