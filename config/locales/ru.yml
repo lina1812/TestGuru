@@ -55,9 +55,12 @@ ru:
       next: "Дальше"
       gist: "Gist вопрос"
     gist:
-      success_html: "Gist успешно сохранён %{url}!"
-      failure: "Во время сохранения gist произошла ошибка"
       description: "Вопрос %{title} из TestGuru"
+      
+  gists:
+    create:
+      success_html: "Gist успешно сохранён <a target='_blank' rel='nofollow' href='%{url}'>%{url}</a>!!"
+      failure: "Во время сохранения gist произошла ошибка"
 
   admin:
     nav:

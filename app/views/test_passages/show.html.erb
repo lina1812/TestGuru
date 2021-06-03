@@ -21,7 +21,7 @@
           <% end %>
         </div>
         <div class="form-group mt-3">
-          <%= link_to t('.gist'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-primary' %>
+          <%= link_to t('.gist'), gists_path(test_passage_id: @test_passage.id), method: :post, class: 'btn btn-primary' %>
           <%= form.submit t('.next'), class: 'btn btn-success' %>
         </div>
       <% end %>

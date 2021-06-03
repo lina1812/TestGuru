@@ -1,16 +1,14 @@
 class GistQuestionService
-  def initialize(question, user, client: nil)
+  def initialize(question, client: nil)
     @question = question
     @test = @question.test
-    @user = user
     @client = client || GitHubClient.new
   end
 
   def call
-    result = @client.create_gist(gist_params)
-    Gist.create(user: @user, question: @question, url: result[:html_url], gist_id: result[:id])
-  rescue StandardError
-    nil
+    @client.create_gist(gist_params)
+  rescue Faraday::ConnectionFailed, Octokit::Unauthorized
+    {}
   end
 
   private
