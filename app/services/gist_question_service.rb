@@ -1,5 +1,15 @@
 class GistQuestionService
-  include Dry::Monads[:result]
+  Success = Struct.new(:html_url, :id) do
+    def success?
+      true
+    end
+  end
+
+  Failure = Struct.new(:error) do
+    def success?
+      false
+    end
+  end
 
   def initialize(question, client: nil)
     @question = question
@@ -8,9 +18,10 @@ class GistQuestionService
   end
 
   def call
-    Success(@client.create_gist(gist_params))
+    result = @client.create_gist(gist_params)
+    Success.new(result[:html_url], result[:id])
   rescue Faraday::ConnectionFailed, Octokit::Unauthorized
-    Failure(:connection_error)
+    Failure.new(:connection_error)
   end
 
   private

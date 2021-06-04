@@ -7,10 +7,10 @@ class GistsController < ApplicationController
       Gist.create(
         user: current_user,
         question: @test_passage.current_question,
-        url: result.value![:html_url],
-        gist_id: result.value![:id]
+        url: result.html_url,
+        gist_id: result.id
       )
-      flash_options = { notice: t('.success_html', url: result.value![:url]) }
+      flash_options = { notice: t('.success_html', url: result.html_url) }
     else
       flash_options = { alert: t('.failure') }
     end
