@@ -1,15 +1,10 @@
 class GistQuestionService
-  Success = Struct.new(:html_url, :id) do
+  Result = Struct.new(:html_url, :id) do
     def success?
-      true
+      html_url.present?
     end
   end
 
-  Failure = Struct.new(:error) do
-    def success?
-      false
-    end
-  end
 
   def initialize(question, client: nil)
     @question = question
@@ -19,9 +14,7 @@ class GistQuestionService
 
   def call
     result = @client.create_gist(gist_params)
-    Success.new(result[:html_url], result[:id])
-  rescue Faraday::ConnectionFailed, Octokit::Unauthorized
-    Failure.new(:connection_error)
+    Result.new(result[:html_url], result[:id])
   end
 
   private
@@ -41,3 +34,4 @@ class GistQuestionService
     [@question.body, *@question.answers.pluck(:body)].join("\n")
   end
 end
+
