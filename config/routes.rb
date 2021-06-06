@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   root 'tests#index'
 
+  resources :gists, only: :create
+
   resources :tests, only: :index do
     member do
       post :start
@@ -29,5 +31,6 @@ Rails.application.routes.draw do
         resources :answers, shallow: true
       end
     end
+    resources :gists, only: :index
   end
 end

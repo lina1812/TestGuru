@@ -55,7 +55,11 @@ ru:
       next: "Дальше"
       gist: "Gist вопрос"
     gist:
-      success: "Gist успешно сохранён!"
+      description: "Вопрос %{title} из TestGuru"
+      
+  gists:
+    create:
+      success_html: "Gist успешно сохранён <a target='_blank' rel='nofollow' href='%{url}'>%{url}</a>!!"
       failure: "Во время сохранения gist произошла ошибка"
 
   admin:
@@ -64,6 +68,7 @@ ru:
       header: "Панель Администратора"
       welcome_html: "Добро пожаловать, <b class='nav-admin user-email'> %{email} </b> Guru!"
       logout: "Выйти"
+      gist: "Таблица с Gists"
     tests:
       create:
         success: "Тест успешно создан."
@@ -121,6 +126,10 @@ ru:
       new:
         header: "Создать новый ответ"
         back: "Вернуться к вопросу" 
+        
+    gists:
+      index:
+        header: "Созданные Gist"
       
       
   test_mailer:
