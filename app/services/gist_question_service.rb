@@ -5,7 +5,6 @@ class GistQuestionService
     end
   end
 
-
   def initialize(question, client: nil)
     @question = question
     @test = @question.test
@@ -34,4 +33,3 @@ class GistQuestionService
     [@question.body, *@question.answers.pluck(:body)].join("\n")
   end
 end
-
