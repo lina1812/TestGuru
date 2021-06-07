@@ -1,37 +1,42 @@
 document.addEventListener('turbolinks:load', function() {
-  var controls = document.querySelectorAll('.password_field')
-  
+  let controls = document.querySelectorAll('.password_field')  
   if (controls) { 
-    for (var i = 0; i< controls.length; i++) {
-     controls[i].addEventListener('keyup', checkPasswords )
-    }
+    new PasswordConfirmation(controls)
   }
-
 })
 
-function checkPasswords() {
-  if (document.getElementById('confirm_password').value == '') {
-    password_fields = document.querySelectorAll('.password_field')
-    for (var i = 0; i< password_fields.length; i++) {
-      password_fields[i].classList.remove('is-valid')
-      password_fields[i].classList.remove('is-invalid')
+class PasswordConfirmation{
+  constructor(inputs){
+    this.inputs = inputs
+    this.password = document.getElementById('password')
+    this.confirm_password = document.getElementById('confirm_password')
+    this.setup()
+  }
+  
+  checkPasswords() {
+    if (this.confirm_password.value == '') {
+      this.inputs.forEach((password_field) =>  {
+        password_field.classList.remove('is-valid')
+        password_field.classList.remove('is-invalid')
+      })
     }
-  } 
-  else {
-    if (document.getElementById('password').value == document.getElementById('confirm_password').value) {
-      password_fields = document.querySelectorAll('.password_field')
-      for (var i = 0; i< password_fields.length; i++) {
-        password_fields[i].classList.add('is-valid')
-        password_fields[i].classList.remove('is-invalid')
-      }
+    else if (this.password.value == this.confirm_password.value) {
+      this.inputs.forEach((password_field) =>  {
+        password_field.classList.add('is-valid')
+        password_field.classList.remove('is-invalid')
+      })
     }
     else { 
-      password_fields = document.querySelectorAll('.password_field')
-      for (var i = 0; i< password_fields.length; i++) {
-        password_fields[i].classList.remove('is-valid')
-        password_fields[i].classList.add('is-invalid')
-      }
+      this.inputs.forEach((password_field) => {
+        password_field.classList.remove('is-valid')
+        password_field.classList.add('is-invalid')
+      })
     }
   }
+  
+  setup() {
+    this.inputs.forEach((input) => {
+      input.addEventListener('keyup', event => { this.checkPasswords() } )
+    })
+  }
 }
-    
