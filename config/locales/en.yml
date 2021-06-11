@@ -87,6 +87,8 @@ en:
       edit: 
         header: "Edit test"
         back: "Back to tests"
+      form_inline:
+        submit: "OK"
         
     questions:
       create:
