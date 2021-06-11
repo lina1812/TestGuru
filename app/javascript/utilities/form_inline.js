@@ -1,36 +1,52 @@
 document.addEventListener('turbolinks:load', function() {
-
-  $('.form-inline-link').on('click', formInlineLinkHandler)
   
-  var errors = document.querySelector('.resource-errors')
-  if (errors) {
-    var resourceId = errors.dataset.resourceId
-    console.log(resourceId)
-    formInlineHandler(resourceId)
+  let controls = document.querySelectorAll('.edit-title')
+  
+  if (controls) {
+    controls.forEach((control) => {
+      new EditTitle(control)
+    })
   }
 })
 
-function formInlineLinkHandler(event) {
-  event.preventDefault()
-  
-  var testId = this.dataset.testId
-  formInlineHandler(testId)
-}
 
-function formInlineHandler(testId) {
-  var link = document.querySelector('.form-inline-link[data-test-id="' + testId + '"]')
-  var testTitle = document.querySelector('.test-title[data-test-id="' + testId + '"]')
-  var formInline = document.querySelector('.form-inline[data-test-id="' + testId + '"]')
-  
-  var $testTitle = $('.test-title[data-test-id="' + testId + '"]')
-  var $formInline =$('.form-inline[data-test-id="' + testId + '"]')
-  $testTitle.toggle()
-  $formInline.toggle()
-  
-  if ($formInline.is('visible')) {
-    link.textContent = "Cancel" // t('helpers.links.actions.cancel')
-  } else {
-    link.textContent = "Edit" // t('helpers.links.actions.edit')  
+class EditTitle{
+  constructor(control){
+    this.control = control
+    this.testId = this.control.dataset.testId
+
+    errors = document.querySelector('.resource-errors')
+    if (errors && errors.dataset.resourceId == this.testId) {
+      this.formInlineHandler()
+    }
+
+    this.setup()
   }
 
+  formInlineLinkHandler(event) {
+    event.preventDefault()
+
+    this.formInlineHandler()
+  }
+  
+  formInlineHandler() {
+    let link = this.control.querySelector('.form-inline-link[data-test-id="' + this.testId + '"]')
+    let testTitle = this.control.querySelector('.test-title[data-test-id="' + this.testId + '"]')
+    let formInline = this.control.querySelector('.form-inline[data-test-id="' + this.testId + '"]')
+
+    testTitle.classList.toggle('hide')
+    formInline.classList.toggle('hide')
+    
+    if (formInline.classList.contains('hide')) {
+      link.textContent = link.dataset.textEdit
+    } else {
+      link.textContent = link.dataset.textCancel 
+    }
+  }
+
+
+
+  setup() {
+    this.control.querySelector('.form-inline-link').addEventListener('click', event => { this.formInlineLinkHandler(event) } )
+  }
 }

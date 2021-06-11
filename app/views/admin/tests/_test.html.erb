@@ -1,4 +1,4 @@
-<tr>
+<tr class="edit-title" data-test-id="<%= test.id %>">
   <td class="align-middle">
     <%= content_tag :span, test.title, class: 'test-title', data: { test_id: test.id } %>
     <%= render 'form_inline', test: test == @test ? @test : test %>
@@ -12,7 +12,9 @@
   <td class="align-middle">
     <%= link_to t('helpers.links.actions.edit'),
                 edit_admin_test_path(test), 
-                data: { test_id: test.id },
+                data: { test_id: test.id,
+                        text_cancel: t('helpers.links.actions.cancel'),
+                        text_edit: t('helpers.links.actions.edit') },
                 class: 'btn btn-success form-inline-link'  %>
     </td>
   

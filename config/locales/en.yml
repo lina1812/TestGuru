@@ -18,6 +18,7 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirm: "Are you sure?"
+        cancel: "Cancel"
       navigation: 
         back: "Back to tests"
       

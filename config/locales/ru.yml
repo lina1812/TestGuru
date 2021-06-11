@@ -19,6 +19,7 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
         confirm: "Вы уверены?"
+        cancel: "Отменить"
       navigation: 
         back: "Вернуться к тестам"
         
