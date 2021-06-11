@@ -32,8 +32,7 @@ class Admin::TestsController < Admin::BaseController
       render :edit
     end
   end
-  
-  
+
   def update_inline
     if @test.update(test_params)
       redirect_to admin_tests_path
@@ -62,7 +61,7 @@ class Admin::TestsController < Admin::BaseController
   def set_test
     @test = Test.find(params[:id])
   end
-  
+
   def set_tests
     @tests = Test.all
   end
