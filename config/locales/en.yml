@@ -18,6 +18,7 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirm: "Are you sure?"
+        cancel: "Cancel"
       navigation: 
         back: "Back to tests"
       
@@ -87,6 +88,8 @@ en:
       edit: 
         header: "Edit test"
         back: "Back to tests"
+      form_inline:
+        submit: "OK"
         
     questions:
       create:

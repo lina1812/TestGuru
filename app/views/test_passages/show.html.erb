@@ -10,6 +10,11 @@
           <%= @test_passage.current_question.body %>
           (<%= @test_passage.current_question.number %> / <%= @test_passage.test.questions.size %>)
         </legend>
+        
+
+    <%= progress_bar(@test_passage.test.questions.size, @test_passage.current_question.number) %>
+  
+        
         <div class="form-group mt-5">
           <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b|%>
             <div class="form-check">

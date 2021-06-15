@@ -19,6 +19,7 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
         confirm: "Вы уверены?"
+        cancel: "Отменить"
       navigation: 
         back: "Вернуться к тестам"
         
@@ -84,7 +85,9 @@ ru:
         header: "Тест: %{title}"
         edit: "Редактировать"
       edit: 
-        header: "Редактировать тест"   
+        header: "Редактировать тест"  
+      form_inline:
+        submit: "OK" 
     questions:
       create:
         success: "Вопрос успешно создан."
