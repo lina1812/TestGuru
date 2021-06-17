@@ -3,6 +3,6 @@ class FeedbacksMailer < ApplicationMailer
     @body = body
     @user = user
 
-    mail to: ENV['SMTP_USERNAME'], from: ENV['SMTP_USERNAME']
+    mail to: ENV['SMTP_USERNAME']
   end
 end

@@ -64,7 +64,9 @@ en:
     new:
       header: "Feedback"
       body: "Message Text"
-      send: "Send"  
+      send: "Send"
+    create:
+      sent: "Your massage was sent!"  
   
   admin:
     nav:

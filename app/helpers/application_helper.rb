@@ -21,15 +21,14 @@ module ApplicationHelper
   end
 
   def progress_bar(max, current)
-    content_tag(:div, 
-      content_tag(:div,
-                    nil,
-                    class: 'progress-bar',
-                    data: {
-                      max_value: max,
-                      now_value: current
-                    }
-                  ),
-     class: 'progress')
+    content_tag(:div,
+                content_tag(:div,
+                            nil,
+                            class: 'progress-bar',
+                            data: {
+                              max_value: max,
+                              now_value: current
+                            }),
+                class: 'progress')
   end
 end
