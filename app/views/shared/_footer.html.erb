@@ -1,5 +1,10 @@
 <div class="container m-3">
   <footer>
+    <% if current_user %>
+      <p>  
+        <%= link_to t('.feedback'), new_feedback_path %>
+      </p>
+    <% end %>
     <%= current_year%><br>
     <%= t('.author_name') %><br>
     <%= github_url('lina1812', 'TestGuru') %><br>
