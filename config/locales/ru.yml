@@ -31,6 +31,7 @@ ru:
         one: "Обнаружено %{count} ошибка"
         other: "Обнаружено %{count} ошибки" 
     footer:
+      feedback: "Обратная связь"
       author_name: "Алёна Кудрявцева-Дьяконова"
       description: "Приложение для создания, управления и прохождения тестов"
       link: "Учебный проект в онлайн-школе Thinknetica"  
@@ -57,6 +58,14 @@ ru:
       gist: "Gist вопрос"
     gist:
       description: "Вопрос %{title} из TestGuru"
+
+  feedbacks:
+    new:
+      header: "Обратная связь"
+      body: "Текст сообщения"
+      send: "Отправить"
+    create:
+      sent: "Ваше сообщение отправлено!" 
       
   gists:
     create:

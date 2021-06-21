@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   resources :gists, only: :create
 
+  resource :feedback, only: %i[new create]
+
   resources :tests, only: :index do
     member do
       post :start

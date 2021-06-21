@@ -1,0 +1,16 @@
+<h2><%= t('.header')%></h2>
+  
+    <%= form_tag( feedback_path ) do %>
+      <div class="form-group">
+  <div class='col col-md-5'>
+
+     
+      <label class="form-label">
+        <%= label_tag :body, t('.body') %>
+        <%= text_area_tag :body, '', rows: 7, cols: 60 %>
+      </label>
+
+      <p><%= submit_tag t('.send'), class: "btn btn-primary" %></p>
+    <% end %>
+
+</div>

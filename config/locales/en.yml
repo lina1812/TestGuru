@@ -28,6 +28,7 @@ en:
         one: "%{count} error detected"
         other: "%{count} errors detected"
     footer:
+      feedback: "Feedback"
       author_name: "Alena Kudriavtseva-Dyakonova"
       description: "Application for creating, managing and passing tests"
       link: "Study project at Thinknetica online school"
@@ -59,6 +60,14 @@ en:
       failure: "An error occurred while saving gist"
       description: "A question about %{title} from TestGuru"
       
+  feedbacks:
+    new:
+      header: "Feedback"
+      body: "Message Text"
+      send: "Send"
+    create:
+      sent: "Your massage was sent!"  
+  
   admin:
     nav:
       admin_panel: "Admin Panel"

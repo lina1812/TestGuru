@@ -6,12 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.create!([
-                       { email: 'lina@example.com', password_digest: 'password' },
-                       { email: 'alex@example.com', password_digest: 'password' },
-                       { email: 'ariana@example.com', password_digest: 'password' },
-                       { email: 'andrey@example.com', password_digest: 'password' }
-                     ])
+User.create!([
+               { email: 'amelia@example.com', password: 'password', first_name: 'Amelia', last_name: 'KD' },
+               { email: 'alex@example.com', password: 'password', first_name: 'Alex', last_name: 'KD' }
+             ])
+admins = Admin.create!([
+                         { email: 'ariana@example.com', password: 'password', first_name: 'Ariana', last_name: 'KD' },
+                         { email: 'andrey@example.com', password: 'password', first_name: 'Andrey', last_name: 'KD' }
+                       ])
 
 categories = Category.create!([
                                 { title: 'Frontend' },
@@ -20,11 +22,11 @@ categories = Category.create!([
                               ])
 
 tests = Test.create!([
-                       { title: 'Ruby', level: 1, category: categories[1], author: users[1] },
-                       { title: 'JavaScript', level: 1, category: categories[0], author: users[1] },
-                       { title: 'C#', level: 2, category: categories[1], author: users[1] },
-                       { title: 'HTML', level: 1, category: categories[0], author: users[1] },
-                       { title: 'SSL', level: 1, category: categories[2], author: users[1] }
+                       { title: 'Ruby', level: 1, category: categories[1], author: admins[1] },
+                       { title: 'JavaScript', level: 1, category: categories[0], author: admins[1] },
+                       { title: 'C#', level: 2, category: categories[1], author: admins[1] },
+                       { title: 'HTML', level: 1, category: categories[0], author: admins[1] },
+                       { title: 'SSL', level: 1, category: categories[2], author: admins[1] }
                      ])
 
 questions = Question.create!([
@@ -32,16 +34,16 @@ questions = Question.create!([
                                { body: 'What is the <a> tag used for?', test: tests[3] },
                                { body: 'How to create a database?', test: tests[4] },
                                { body: 'What is the <body> tag used for?', test: tests[3] },
-                               { body: 'What is the <p> tag used for?', test: tests[3] }
+                               { body: 'What is the <p> tag used for?', test: tests[3] },
+                               { body: 'When was javascript created?', test: tests[1] },
+                               { body: 'Who created javascript?', test: tests[1] },
+                               { body: 'When was C# created?', test: tests[2] }
                              ])
 
 Answer.create!([
-                 { body: 'CREATE DATABASE name', question: questions[1], correct: true },
-                 { body: 'UPDATE DATABASE name', question: questions[1] },
-                 { body: 'CREATE TABLE name', question: questions[1] },
+                 { body: 'CREATE DATABASE name', question: questions[2], correct: true },
+                 { body: 'UPDATE DATABASE name', question: questions[2] },
+                 { body: 'CREATE TABLE name', question: questions[2] },
                  { body: 'for, while, loop...', question: questions[0], correct: true },
                  { body: 'if, def... ', question: questions[0] }
                ])
-
-PassedTest.create!({ user: User.first, test: Test.first, points: 10 })
-PassedTest.create!({ user: User.first, test: Test.last, points: 10 })
