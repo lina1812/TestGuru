@@ -71,7 +71,9 @@ ru:
     create:
       success_html: "Gist успешно сохранён <a target='_blank' rel='nofollow' href='%{url}'>%{url}</a>!!"
       failure: "Во время сохранения gist произошла ошибка"
-
+  badges:
+    index:
+      header: "Награды"
   admin:
     nav:
       admin_panel: "Панель Администратора"
@@ -142,8 +144,33 @@ ru:
     gists:
       index:
         header: "Созданные Gist"
+        
+    badges:
+      create:
+        success: "Бадж успешно создан"
+      types:
+        by_category: "Успешное прохождение всех тестов из категории"
+        by_success_passing_on_the_first_try: "Успешное прохождение теста с первой попытки"
+        by_success_passing_all_tests_of_certain_level: "Успешное прохождение всех тестов уровня"
+      index:
+        header: "Награды"
+        actions: "Действия"
+        new: "Создать новую награду"
+      show:
+        header: "Награды"
+        edit: "Редактировать"
+        back: "Вернуться к наградам" 
+      edit: 
+        header: "Редактировать награду"
+        back: "Назад"
+      new:
+        header: "Создать новую награду"
+        back: "Вернуться к наградам"
+      form:
+        create: "Создать награду"
+        update: "Обновить награду"
       
-      
+        
   test_mailer:
     completed_test:
       subgect: "Вы успешно завершили тест на TestGuru!"

@@ -4,6 +4,8 @@ en:
       test: "Test"
       question: "Question"
       answer: "Answer"
+      gist: "Gist"
+      badge: "Badge"
       
     attributes:
       test:
@@ -28,7 +30,12 @@ en:
         last_name: "Last name"
         password_confirmation: "Password confirmation"
         remember_me: "Remember me"
-               
+      badge:
+        title: "Title"
+        image: "Image"
+        type: "Type"
+        category: "Category"
+        test_level: "Level"         
     errors:
       messages:
         blank: "can't be blank"
