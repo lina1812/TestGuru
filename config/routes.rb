@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   resource :feedback, only: %i[new create]
   resources :badges, only: :index
+  resources :received_badges, only: :index
   resources :tests, only: :index do
     member do
       post :start

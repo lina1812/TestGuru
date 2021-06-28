@@ -1,0 +1,15 @@
+<tr>
+  <td><%= received_badge.badge.title %></td>
+  <td><%= image_tag(received_badge.badge.image) %></td>
+  <td>
+    <%= t("admin.badges.types.#{received_badge.badge.type}") %>
+    <% if received_badge.badge.category %>
+      <%= received_badge.badge.category&.title %>
+    <% end %>
+    <% if received_badge.badge.test_level %>
+     <%= received_badge.badge.test_level %>
+    <% end %>
+  </td>
+
+
+</tr>

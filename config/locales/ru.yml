@@ -74,7 +74,11 @@ ru:
   badges:
     index:
       header: "Награды"
-      received: "Получена?"
+  received_badges:
+    index:
+      header: "Полученые награды"
+      back: "Назад"
+      
   admin:
     nav:
       admin_panel: "Панель Администратора"

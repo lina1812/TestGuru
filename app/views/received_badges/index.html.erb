@@ -13,9 +13,9 @@
     </tr>
   </thead>
   <tbody >
-    <%= render @badges %>
+    <%= render @received_badges %>
   </tbody>
 </table>
-<p>
-   <%= link_to t('.received_badges'), received_badges_path, :class => 'btn btn-primary m-3' %>
+<p> 
+  <%= link_to t('.back'), badges_path, class: 'btn btn-primary' %>
 </p>

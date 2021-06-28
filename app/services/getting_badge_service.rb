@@ -17,7 +17,7 @@ class GettingBadgeService
     badges = Badge.where(type: :by_success_passing_on_the_first_try)
     if badges.any? &&
        (@user.test_passages.where(test_id: @test.id).count == 1) &&
-        @test_passage.successful?
+       @test_passage.successful?
       add_badges_to_user(badges)
     end
   end
@@ -26,13 +26,11 @@ class GettingBadgeService
     badges = Badge.where(type: :by_category, category_id: @test.category_id)
     puts not_passed_test_in_category_count(@test.category_id)
     add_badges_to_user(badges) if badges.any? && (not_passed_test_in_category_count(@test.category_id) == 0)
-    
   end
 
   def check_all_by_level_badge
     badges = Badge.where(type: :by_success_passing_all_tests_of_certain_level, test_level: @test.level)
     add_badges_to_user(badges) if badges.any? && (not_passed_test_by_level_count(@test.level) == 0)
-    
   end
 
   def add_badges_to_user(badges)
