@@ -1,0 +1,22 @@
+<div class="page-header m-3">
+  <h1><%=t('.header') %></h1>
+</div>
+
+<%= render 'shared/errors', resource: @test %>
+
+<table class="table table-striped m-3">
+  <thead>
+    <tr>
+      <th><%= t(Badge.human_attribute_name(:title)) %></th>
+      <th><%= t(Badge.human_attribute_name(:image)) %></th>
+      <th><%= t(Badge.human_attribute_name(:type)) %></th>      
+      <th colspan="3" scope="col" class="text-center"><%= t('.actions') %></th>
+    </tr>
+  </thead>
+  <tbody >
+    <%= render @badges %>
+  </tbody>
+</table>
+<p>
+  <%= link_to t('.new'), new_admin_badge_path, :class => 'btn btn-primary m-3' %>
+</p>
