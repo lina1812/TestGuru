@@ -5,7 +5,6 @@ class TestPassagesController < ApplicationController
   def show; end
 
   def result
-    
     @counting_result = @test_passage.counting_result
     GettingBadgeService.new(@test_passage).call
   end
