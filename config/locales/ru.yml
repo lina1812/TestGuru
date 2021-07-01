@@ -45,6 +45,7 @@ ru:
     index:
       header: "Доступные Тесты"
       actions: "Действия"
+      timer: "Таймер"
       start: "Старт"
       
   test_passages:
@@ -56,6 +57,7 @@ ru:
       header: "Прохождение теста %{title}"  
       next: "Дальше"
       gist: "Gist вопрос"
+      time_left: "Оставшееся время %{time} минут"
     gist:
       description: "Вопрос %{title} из TestGuru"
 
@@ -100,6 +102,7 @@ ru:
       show:
         header: "Тест: %{title}"
         edit: "Редактировать"
+        no_limits: "Без ограничений"
       edit: 
         header: "Редактировать тест"  
       form_inline:

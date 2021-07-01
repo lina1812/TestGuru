@@ -10,4 +10,12 @@
     <strong><%= t(Test.human_attribute_name(:category)) %>:</strong>
     <%= test.category.title %>
   </p>
+  <p>
+    <strong><%= t(Test.human_attribute_name(:timer)) %>:</strong>
+    <% if test.timer.present? %>
+      <%= test.timer %>
+    <% else %>
+      <%= t('admin.tests.show.no_limits') %>
+    <% end %>
+  </p>
 </div>

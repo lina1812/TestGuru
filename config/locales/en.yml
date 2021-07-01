@@ -94,6 +94,7 @@ en:
         header: "Test: %{title}"
         back: "Back to tests"
         edit: "Edit"
+        no_limits: "No limits"
       edit: 
         header: "Edit test"
         back: "Back to tests"
