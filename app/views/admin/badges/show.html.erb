@@ -15,7 +15,7 @@
   
   <p>
     <b><%= t(Badge.human_attribute_name(:type)) %>:</b>
-    <%= t("admin.badges.types.#{@badge.type}") %> 
+    <%= t("admin.badges.types.#{@badge.rule_type}") %> 
     <% if @badge.category %>
       <%= @badge.category&.title %>
     <% end %>

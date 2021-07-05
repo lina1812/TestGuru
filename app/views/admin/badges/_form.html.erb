@@ -15,18 +15,14 @@
           </p>
   
           <p>
-            <%= form.label :type %>:
-            <%= form.select :type, translate_types_from_symbol, {prompt: true}, class: 'form-control selectSwitchFields' %>
+            <%= form.label :rule_type %>:
+            <%= form.select :rule_type, translate_types_from_symbol, {prompt: true}, class: 'form-control selectSwitchFields' %>
           </p>
   
-          <p class='allVariant variant_by_category'>
-            <%= form.label :category_id %>:
-            <%= form.collection_select :category_id, Category.all, :id, :title, {prompt: true}, class: 'form-control' %>
-          </p>
           
-          <p class='allVariant variant_by_success_passing_all_tests_of_certain_level'>
-            <%= form.label :test_level %> 
-            <%= form.number_field :test_level, class: 'form-control' %>
+          <p>
+            <%= form.label :rule_value %> 
+            <%= form.number_field :rule_value, class: 'form-control' %>
           </p>
           
           <p><%= form.submit t( method_for_submit_form(@badge) ), class: 'btn btn-primary' %></p>

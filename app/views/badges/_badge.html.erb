@@ -2,7 +2,7 @@
   <td><%= badge.title %></td>
   <td><%= image_tag(badge.image) %></td>
   <td>
-    <%= t("admin.badges.types.#{badge.type}") %>
+    <%= t("admin.badges.types.#{badge.rule_type}") %>
     <% if badge.category %>
       <%= badge.category&.title %>
     <% end %>
