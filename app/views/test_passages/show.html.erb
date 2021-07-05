@@ -2,8 +2,9 @@
   <h1><%=t('.header', title: @test_passage.test.title) %></h1>
 </div>
 <% if @test_passage.test.timer.present? %>
-  <h3><%=t('.time_left', time: (@test_passage.created_at + @test_passage.test.timer*60 - Time.now) / 60) %></h3>
+  <h3><%=t('.time_left_html', time: (@test_passage.created_at + @test_passage.test.timer*60 - Time.now).ceil) %></h3>
 <% end %>
+<%= link_to 'finish', finish_test_passage_path(@test_passage), class: 'finish_link hide' %>
 <div class='row mb-5 mt-3'>
   <div class='col col-md-5'>
     <div class="card border-primary p-3">

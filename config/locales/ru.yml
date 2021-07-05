@@ -57,7 +57,7 @@ ru:
       header: "Прохождение теста %{title}"  
       next: "Дальше"
       gist: "Gist вопрос"
-      time_left: "Оставшееся время %{time} минут"
+      time_left_html: "Оставшееся время <span class='timer' data-left='%{time}'></span>"
     gist:
       description: "Вопрос %{title} из TestGuru"
 

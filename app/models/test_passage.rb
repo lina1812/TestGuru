@@ -24,6 +24,10 @@ class TestPassage < ApplicationRecord
   def counting_result
     (correct_questions / test.questions.size.to_f) * 100
   end
+  
+  def timer_out?
+    test.timer.present? && (created_at + test.timer*60 - Time.now) < 0
+  end
 
   private
 
