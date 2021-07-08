@@ -55,6 +55,7 @@ en:
       header: "Passing the %{title} Test"
       next: "Next"
       gist: "Gist Question"
+      time_left_html: "Time left <span class='timer' data-left='%{time}'></span>"
     gist:
       success_html: "Gist was successfully created <a target='_blank' rel='nofollow' href='%{url}'>%{url}</a>!"
       failure: "An error occurred while saving gist"
@@ -94,6 +95,7 @@ en:
         header: "Test: %{title}"
         back: "Back to tests"
         edit: "Edit"
+        no_limits: "No limits"
       edit: 
         header: "Edit test"
         back: "Back to tests"

@@ -16,6 +16,7 @@ import "utilities/form_inline"
 import "components/password_confirmation"
 import "components/progress_bar"
 import "components/switch_fields"
+import "components/timer"
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.

@@ -17,6 +17,7 @@ ru:
         level: "Уровень"
         category: "Категория"
         questions: "Вопросы"
+        timer: "Таймер"
       question:
         body: "Текст вопроса"
         answers: "Ответы"

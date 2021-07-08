@@ -13,6 +13,7 @@ en:
         level: "Level"
         category: "Category"
         questions: "Questions"
+        timer: "Timer"
       question:
         body: "Body"
         answers: "Answers"

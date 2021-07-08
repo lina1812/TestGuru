@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(version: 2021_07_01_111553) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "author_id"
     t.integer "questions_count"
+    t.integer "timer"
     t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
     t.index ["title", "level"], name: "index_tests_on_title_and_level", unique: true
