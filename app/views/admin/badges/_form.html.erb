@@ -1,0 +1,33 @@
+<div class="form-group m-3 ">
+  <div class='row mb-5 mt-3'>
+    <div class='col col-md-5'>
+      <div class="card border-primary p-3">
+        <%= form_with model: [:admin, badge], local: true do |form| %>
+          <%= render 'shared/errors', resource: @badge %>
+
+          <p>
+            <%= form.label :title %>
+            <%= form.text_field :title, class: 'form-control' %>
+          </p>
+          <p>
+            <%= form.label :image %> 
+            <%= form.text_field :image, class: 'form-control' %>
+          </p>
+  
+          <p>
+            <%= form.label :rule_type %>:
+            <%= form.select :rule_type, translate_types_from_symbol, {prompt: true}, class: 'form-control selectSwitchFields' %>
+          </p>
+  
+          
+          <p>
+            <%= form.label :rule_value %> 
+            <%= form.number_field :rule_value, class: 'form-control' %>
+          </p>
+          
+          <p><%= form.submit t( method_for_submit_form(@badge) ), class: 'btn btn-primary' %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

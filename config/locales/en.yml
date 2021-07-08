@@ -148,7 +148,30 @@ en:
     gists:
       index:
         header: "Created Gists"
-
+    badges:
+      create:
+        success: "Badge was successfully created"
+      types:
+        by_category: "Successful passing of all tests in the category"
+        by_success_passing_on_the_first_try: "Passing the test successfully on the first try"
+        by_success_passing_all_tests_of_certain_level: "Successful completion of all level tests"
+      index:
+        header: "Badges"
+        actions: "Action"
+        new: "New Badge"
+      show:
+        header: "Badges"
+        edit: "Edit"
+        back: "Back to Badges"
+      edit: 
+        header: "Edit Badge"
+        back: "Back to Badges"
+      new:
+        create: "Create Badge"
+        back: "Back to Badges"
+      form:
+        create: "Create badge"
+        update: "Update badge"
 
   test_mailer:
     completed_test:

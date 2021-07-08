@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   resources :gists, only: :create
 
   resource :feedback, only: %i[new create]
-
+  resources :badges, only: :index
+  resources :received_badges, only: :index
   resources :tests, only: :index do
     member do
       post :start
@@ -36,5 +37,6 @@ Rails.application.routes.draw do
       end
     end
     resources :gists, only: :index
+    resources :badges
   end
 end

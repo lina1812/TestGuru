@@ -4,6 +4,7 @@ ru:
       test: "Тест"
       question: "Вопрос"
       answer: "Ответ"
+      badge: "Награды"
       user:
         few: Пользователя
         many: Пользователей
@@ -53,6 +54,12 @@ ru:
         unconfirmed_email: Неподтвержденный email
         unlock_token: Токен разблокировки
         updated_at: Дата обновления
+      badge:
+        title: "Название"
+        image: "Изображение"
+        type: "Тип"
+        category: "Категория"
+        test_level: "Уровень"
     errors:
       messages:
         blank: "не может быть пустым"
